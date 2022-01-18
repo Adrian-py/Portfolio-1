@@ -70,3 +70,193 @@ nav {
 #nav-close {
   width: 8%;
 }
+
+/* =========
+ Main Content
+=========== */
+main {
+  width: 100%;
+  padding: 10vh 13.03vw 16.37vh 13.03vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+main > div {
+  margin-bottom: 12.7795vh;
+}
+
+main > div:last-child {
+  margin: 0;
+}
+
+.description__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6.75rem;
+}
+
+.description__picture {
+  width: 34.21%;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3.125rem;
+  flex-direction: column;
+}
+
+.description__name {
+  font-family: "Futura Hv BT";
+  font-size: 6rem;
+}
+
+.description__about {
+  font-family: "Futura Lt BT";
+  font-size: 2rem;
+}
+
+.description__education {
+  width: 95%;
+}
+
+th,
+td {
+  padding: 0.532vh 1.277vw;
+  font-family: "Futura Lt BT";
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.description__education__head {
+  font-size: 2rem;
+  background: var(--primary);
+  color: var(--light);
+  text-align: left;
+}
+
+.description__education__detail {
+  font-size: 1.5rem;
+}
+
+.softwares__title,
+.programming-languages__title {
+  font-family: "Futura Hv BT";
+  font-size: 4rem;
+}
+/* Softwares */
+.softwares__container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.555914vh;
+}
+
+.softwares__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 6.38637vw;
+}
+
+.softwares__icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.softwares__icon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Futura Hv BT";
+  font-size: 1.25rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.softwares__icon:hover::after {
+  opacity: 1;
+}
+
+#vscode-icon::after {
+  content: "VS Code";
+}
+
+#github-icon::after {
+  content: "Github";
+}
+
+#figma-icon::after {
+  content: "Figma";
+}
+
+#adobe-photoshop-icon::after {
+  content: "Adobe Photoshop";
+}
+
+/* Programming Languages */
+.programming-languages__container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.555914vh;
+}
+
+.programming-languages__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 6.38637vw;
+}
+
+.programming-languages__icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.programming-languages__icon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: "Futura Hv BT";
+  font-size: 1.25rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.programming-languages__icon:hover::after {
+  opacity: 1;
+}
+
+#css3-icon::after {
+  content: "CSS";
+}
+
+#javascript-icon::after {
+  content: "Javascript";
+}
+
+#sass-icon::after {
+  content: "Sass";
+}
+
+#mysql-icon::after {
+  content: "MySQL";
+}
+
+#cpp-icon::after {
+  content: "C++";
+}
+
+#git-icon::after {
+  content: "Git";
+}
