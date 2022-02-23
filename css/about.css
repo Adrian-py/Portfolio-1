@@ -76,7 +76,7 @@ nav {
 =========== */
 main {
   width: 100%;
-  padding: 10vh 13.03vw 16.37vh 13.03vw;
+  padding: 10vh 10vw 16.37vh 10vw;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -259,4 +259,213 @@ td {
 
 #git-icon::after {
   content: "Git";
+}
+
+/* Large - 1600, 1536 */
+@media only screen and (max-width: 100em) {
+  main {
+    padding: 10vh 6.44vw;
+  }
+  .description__name {
+    font-size: 5.5rem;
+  }
+  .description__about {
+    font-size: 1.75rem;
+  }
+}
+
+/* Medium - 1440, 1366, 1280 */
+@media only screen and (max-width: 85.375em) {
+  .nav-links li a {
+    font-size: 1.75rem;
+  }
+  .description__container {
+    gap: 4.5rem;
+  }
+  .description {
+    gap: 2rem;
+  }
+  .description__name {
+    font-size: 5rem;
+  }
+  .description__about {
+    font-size: 1.5rem;
+  }
+  .softwares__container,
+  .programming-languages__container {
+    gap: 3vh;
+  }
+}
+
+/* Small - 1024x768 */
+@media only screen and (max-width: 64em) {
+  .nav-links {
+    width: 65%;
+  }
+  main > div {
+    margin-bottom: 10vh;
+  }
+  .description__container {
+    gap: 2.5rem;
+  }
+  .description__name {
+    font-size: 4rem;
+  }
+  .description__about {
+    font-size: 1.4rem;
+  }
+  .description__education {
+    width: 100%;
+  }
+  .description__education__head {
+    font-size: 1.5rem;
+  }
+  .description__education__detail {
+    font-size: 1.1rem;
+  }
+  .softwares__title,
+  .programming-languages__title {
+    font-size: 3rem;
+  }
+  .softwares__list,
+  .programming-languages__list {
+    height: 8vh;
+  }
+  .softwares__list svg,
+  .programming-languages__list svg {
+    height: 100%;
+  }
+  .softwares__icon::after {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet - 768x1024 */
+@media only screen and (max-width: 48em) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10%;
+    background: white;
+    box-shadow: -10px 0 50px 10px rgba(12, 21, 45, 0.25);
+    transition: all 250ms ease-in-out;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  #nav-burger {
+    height: 3.3125rem;
+    display: block;
+    cursor: pointer;
+  }
+
+  #nav-close {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    display: block;
+  }
+
+  #nav-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(12, 21, 45, 0.25);
+    z-index: 1;
+  }
+  .description__container {
+    flex-direction: column;
+  }
+  .description__picture {
+    width: 60%;
+  }
+  .description {
+    align-items: center;
+  }
+  .description__name {
+    font-size: 4.5rem;
+  }
+  .description__about {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .softwares__container,
+  .programming-languages__container {
+    width: 100%;
+    align-items: center;
+  }
+  .softwares__title,
+  .programming-languages__title {
+    text-align: center;
+  }
+  .softwares__list,
+  .programming-languages__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  }
+  .softwares__list > div,
+  .programming-languages__list > div {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Phone - 360x640 */
+@media only screen and (max-width: 22.5em) {
+  nav {
+    padding: 2.5rem 9.17vw 0 9.17vw;
+  }
+
+  .nav-logo,
+  #nav-burger {
+    height: 2rem;
+  }
+
+  #nav-close {
+    width: 12%;
+  }
+  .description__container {
+    gap: 1rem;
+  }
+  .description__picture {
+    width: 75%;
+  }
+  .description {
+    gap: 1.5rem;
+  }
+  .description__name {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .description__about {
+    font-size: 1.25rem;
+  }
+  .softwares__title,
+  .programming-languages__title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .softwares__list,
+  .programming-languages__list {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17.5%, 1fr));
+    gap: 10%;
+    row-gap: 5vh;
+  }
+  .softwares__list > div,
+  .programming-languages__list > div {
+    display: flex;
+    justify-content: center;
+  }
 }
