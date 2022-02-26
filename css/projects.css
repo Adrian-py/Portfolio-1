@@ -16,8 +16,8 @@ html {
 }
 
 /* =========
-    Navigation
-  =========== */
+      Navigation
+    =========== */
 nav {
   padding: 2.5rem 6.44vw 0 6.44vw;
   display: flex;
@@ -72,107 +72,117 @@ nav {
 }
 
 /* =========
-  Main Content
-  =========== */
+ Main Content
+=========== */
 main {
-  position: relative;
-  top: 4.444vh;
-  height: 79.814vh;
-  padding: 0 12.65625vw;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  width: 100%;
+  padding: 0 6.302vw;
+  padding-top: 7.87vh;
 }
 
-.contact__title {
+.projects__title {
   font-size: 6rem;
+  margin-bottom: 7.87vh;
+}
+
+.projects__list__titles {
+  margin-bottom: 7.87vh;
+}
+
+.projects__list__titles__title {
+  font-size: 4rem;
+}
+
+.projects__list__titles__desc {
+  font-size: 2rem;
+}
+
+.projects__list__cards {
+  width: auto;
+  height: 31.25rem;
+  margin-bottom: 12.129vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.125vw;
+}
+
+.projects__list__cards__card {
+  width: 25rem;
+  height: 100%;
+  background: var(--light);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.projects__list__cards__card__image {
+  width: 100%;
+  height: 60%;
+  background: lightblue;
+}
+
+.projects__list__cards__card__title {
+  font-size: 2rem;
   font-family: "Futura Hv BT";
 }
 
-.contact__form {
-  width: 100%;
-  height: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
-.contact__form__field {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.contact__form__label {
-  font-size: 3.5rem;
-}
-
-.contact__form__input {
-  width: 82.91%;
-  height: 89.552%;
-  padding: 0 1.5%;
-  border: 1px solid var(--dark);
-  border-radius: 10px;
-  font-size: 1.5rem;
-  font-family: "Futura Bk BT";
-}
-
-.contact__form__input--large {
-  padding-top: 1%;
-  height: 24.907vh;
-  resize: none;
-}
-
-.contact__form__submit {
-  position: relative;
-  width: 16.329%;
-  height: 12.929%;
+.projects__list__cards__card__desc {
+  width: 72.25%;
+  height: 22%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  font-size: 2rem;
-  color: var(--light);
-  background: var(--primary);
-  box-shadow: 0px 0px 19.9718px 16.976px rgba(68, 120, 255, 0.2);
-  border-radius: 14.9788px;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: auto 0;
 }
 
-#submit {
-  position: absolute;
-  top: 0;
-  left: 0;
+.projects__list__cards__card__buttons {
   width: 100%;
+  height: 60.465%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.projects__list__cards__card__button {
   height: 100%;
-  opacity: 0;
-  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  text-decoration: none;
+}
+
+.projects__list__cards__card__button--github {
+  min-width: 43.75%;
+  background: var(--dark);
+}
+
+.projects__list__cards__card__button--live {
+  min-width: 46.875%;
+  background: var(--primary);
+}
+
+.projects__list__cards__card__button span {
+  font-size: 1.25rem;
+  color: var(--light);
 }
 
 /* Large - 1600, 1536 */
 @media only screen and (max-width: 100em) {
-  main {
-    padding: 0 8vw;
-  }
-  .contact__form__label {
-    font-size: 2.75rem;
-  }
 }
 
 /* Medium - 1440, 1366, 1280 */
 @media only screen and (max-width: 85.375em) {
   .nav-links li a {
     font-size: 1.75rem;
-  }
-  .contact__title {
-    font-size: 5rem;
-  }
-  .contact__form__label {
-    font-size: 2.25rem;
-  }
-  .contact__form__submit {
-    width: 18%;
-    height: 14%;
   }
 }
 
@@ -181,29 +191,10 @@ main {
   .nav-links {
     width: 65%;
   }
-  main {
-    padding: 0 6.44vw;
-    padding-bottom: 4vh;
-  }
-  .contact__form__label {
-    font-size: 2rem;
-  }
-  .contact__form__submit {
-    width: 22.5%;
-  }
 }
 
 /* Height < 768 */
 @media only screen and (max-height: 48em) {
-  main {
-    padding-bottom: 4vh;
-  }
-  .contact__title {
-    font-size: 4rem;
-  }
-  .contact__form__submit {
-    height: 20%;
-  }
 }
 
 /* Tablet - 768x1024 */
@@ -246,32 +237,6 @@ main {
     background: rgba(12, 21, 45, 0.25);
     z-index: 1;
   }
-
-  .contact__title {
-    text-align: center;
-  }
-
-  .contact__form {
-    height: 88%;
-  }
-
-  .contact__form__field {
-    flex-direction: column;
-  }
-
-  .contact__form__input {
-    width: 100%;
-    height: 4vh;
-  }
-
-  .contact__form__input--large {
-    height: 25vh;
-  }
-
-  .contact__form__submit {
-    width: 30vw;
-    font-size: 2.25rem;
-  }
 }
 
 /* Phone - 360x640 */
@@ -287,37 +252,5 @@ main {
 
   #nav-close {
     width: 12%;
-  }
-
-  main {
-    justify-content: flex-start;
-    gap: 3.125vh;
-  }
-
-  .contact__title {
-    font-size: 2.5rem;
-  }
-
-  .contact__form__label {
-    font-size: 1.25rem;
-  }
-
-  .contact__form__input {
-    height: 4.375vh;
-  }
-
-  .contact__form__input--large {
-    height: 20.468vh;
-  }
-
-  .contact__form__submit {
-    width: 40.6583vw;
-    height: 8.98vh;
-    font-size: 1.23rem;
-    gap: 10%;
-  }
-
-  .submit-icon {
-    width: 1.5rem;
   }
 }
