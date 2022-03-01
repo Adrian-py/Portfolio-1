@@ -12,7 +12,9 @@
   <body>
     <header>
       <nav>
-        <a href="../index.html"><img src="../assets/logo.svg" alt="logo" class="nav-logo" /></a>
+        <a href="../index.html"
+          ><img src="../assets/logo.svg" alt="logo" class="nav-logo"
+        /></a>
 
         <ul class="nav-links" id="nav-links">
           <li><a href="../index.html">Home</a></li>
@@ -28,7 +30,9 @@
     <main class="projects">
       <h1 class="projects__title">My Portfolio</h1>
       <div class="projects__list">
-          <!-- Personal Projects -->
+        <!-- Personal Projects -->
+        <div class="projects__list__container">
+          <!-- Title -->
           <div class="projects__list__titles">
             <h2 class="projects__list__titles__title">Personal Projects</h2>
             <p class="projects__list__titles__desc">
@@ -37,199 +41,270 @@
             </p>
           </div>
 
-          <div class="projects__list__cards">
-            <div class="projects__list__cards__card">
-              <img src="" alt="" class="projects__list__cards__card__image" />
+          <!-- Projects List -->
+          <div class="projects__list__cards__container">
+            <div class="projects__list__cards">
+              <div class="projects__list__cards__card">
+                <span
+                  class="projects__list__cards__card__image__container"
+                  id="twitter-clone"
+                  ><img
+                    src="../assets/project-screenshots/twitter-clone-pe.jpg"
+                    draggable="false"
+                    alt=""
+                    class="projects__list__cards__card__image"
+                /></span>
 
-              <div class="projects__list__cards__card__desc">
-                <h3 class="projects__list__cards__card__title">
-                  Twitter Clone
-                </h3>
-                <div class="projects__list__cards__card__buttons">
-                  <a
-                    href=""
-                    class="projects__list__cards__card__button projects__list__cards__card__button--github"
-                  >
-                    <img
-                      src="../assets/github-icon.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Github</span>
-                  </a>
-                  <a href="" class="projects__list__cards__card__button projects__list__cards__card__button--live">
-                    <img
-                      src="../assets/open-live.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Live Site</span>
-                  </a>
+                <div class="projects__list__cards__card__desc">
+                  <h3 class="projects__list__cards__card__title">
+                    Twitter Clone
+                  </h3>
+                  <div class="projects__list__cards__card__buttons">
+                    <a
+                      href="https://github.com/Adrian-py/Twitter-Clone-FE"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--github"
+                    >
+                      <img
+                        src="../assets/github-icon.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Github</span>
+                    </a>
+                    <a
+                      href="https://adrian-py.github.io/Twitter-Clone-FE/homepage/index.html"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--live"
+                    >
+                      <img
+                        src="../assets/open-live.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Live Site</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="projects__list__cards__card">
-              <img src="" alt="" class="projects__list__cards__card__image" />
+              <div class="projects__list__cards__card">
+                <span
+                  class="projects__list__cards__card__image__container"
+                  id="kenshin-impact"
+                  ><img
+                    src="../assets/project-screenshots/kenshin-impact-pe.jpg"
+                    draggable="false"
+                    alt=""
+                    class="projects__list__cards__card__image"
+                /></span>
 
-              <div class="projects__list__cards__card__desc">
-                <h3 class="projects__list__cards__card__title">
-                  Kenshin Impact
-                </h3>
-                <div class="projects__list__cards__card__buttons">
-                  <a
-                    href=""
-                    class="projects__list__cards__card__button projects__list__cards__card__button--github"
-                  >
-                    <img
-                      src="../assets/github-icon.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Github</span>
-                  </a>
-                  <a href="" class="projects__list__cards__card__button projects__list__cards__card__button--live">
-                    <img
-                      src="../assets/open-live.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Live Site</span>
-                  </a>
+                <div class="projects__list__cards__card__desc">
+                  <h3 class="projects__list__cards__card__title">
+                    Kenshin Impact
+                  </h3>
+                  <div class="projects__list__cards__card__buttons">
+                    <a
+                      href="https://github.com/Adrian-py/HCI-PROJECT"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--github"
+                    >
+                      <img
+                        src="../assets/github-icon.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Github</span>
+                    </a>
+                    <a
+                      href="https://adrian-py.github.io/HCI-PROJECT/Register%20Page/register.html"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--live"
+                    >
+                      <img
+                        src="../assets/open-live.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Live Site</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Side Projects -->
+        <!-- Side Projects -->
+        <div class="projects__list__container">
           <div class="projects__list__titles">
             <h2 class="projects__list__titles__title">Side Projects</h2>
             <p class="projects__list__titles__desc">
-              These are projects that I got from frontendmentor.com or other third party sources.
+              These are projects that I got from frontendmentor.com or other
+              third party sources.
             </p>
           </div>
+          <div class="projects__list__cards__container">
+            <div class="projects__list__cards">
+              <div class="projects__list__cards__card">
+                <span
+                  class="projects__list__cards__card__image__container"
+                  id="social-dashboard"
+                  ><img
+                    src="../assets/project-screenshots/social-media-dashboard-fem.jpg"
+                    draggable="false"
+                    alt=""
+                    class="projects__list__cards__card__image"
+                /></span>
 
-          <div class="projects__list__cards">
-            <div class="projects__list__cards__card">
-              <img src="" alt="" class="projects__list__cards__card__image" />
-
-              <div class="projects__list__cards__card__desc">
-                <h3 class="projects__list__cards__card__title">
-                  Twitter Clone
-                </h3>
-                <div class="projects__list__cards__card__buttons">
-                  <a
-                    href=""
-                    class="projects__list__cards__card__button projects__list__cards__card__button--github"
-                  >
-                    <img
-                      src="../assets/github-icon.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Github</span>
-                  </a>
-                  <a href="" class="projects__list__cards__card__button projects__list__cards__card__button--live">
-                    <img
-                      src="../assets/open-live.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Live Site</span>
-                  </a>
+                <div class="projects__list__cards__card__desc">
+                  <h3 class="projects__list__cards__card__title">Dashboard</h3>
+                  <div class="projects__list__cards__card__buttons">
+                    <a
+                      href="https://github.com/Adrian-py/Frontend-Mentor----Social-media-dashboard-with-theme-switcher-challenge-hub/tree/master/app"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--github"
+                    >
+                      <img
+                        src="../assets/github-icon.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Github</span>
+                    </a>
+                    <a
+                      href="https://adrian-py.github.io/Frontend-Mentor----Social-media-dashboard-with-theme-switcher-challenge-hub/"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--live"
+                    >
+                      <img
+                        src="../assets/open-live.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Live Site</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="projects__list__cards__card">
-              <img src="" alt="" class="projects__list__cards__card__image" />
+              <div class="projects__list__cards__card">
+                <span
+                  class="projects__list__cards__card__image__container"
+                  id="stats-preview"
+                  ><img
+                    src="../assets/project-screenshots/stats-preview-fem.jpg"
+                    draggable="false"
+                    alt=""
+                    class="projects__list__cards__card__image"
+                /></span>
 
-              <div class="projects__list__cards__card__desc">
-                <h3 class="projects__list__cards__card__title">
-                  Twitter Clone
-                </h3>
-                <div class="projects__list__cards__card__buttons">
-                  <a
-                    href=""
-                    class="projects__list__cards__card__button projects__list__cards__card__button--github"
-                  >
-                    <img
-                      src="../assets/github-icon.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Github</span>
-                  </a>
-                  <a href="" class="projects__list__cards__card__button projects__list__cards__card__button--live">
-                    <img
-                      src="../assets/open-live.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Live Site</span>
-                  </a>
+                <div class="projects__list__cards__card__desc">
+                  <h3 class="projects__list__cards__card__title">
+                    Stats Preview
+                  </h3>
+                  <div class="projects__list__cards__card__buttons">
+                    <a
+                      href="https://github.com/Adrian-py/Frontend-Mentor---stats-preview-card-component-challenge-hub"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--github"
+                    >
+                      <img
+                        src="../assets/github-icon.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Github</span>
+                    </a>
+                    <a
+                      href="https://adrian-py.github.io/Frontend-Mentor---stats-preview-card-component-challenge-hub/"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--live"
+                    >
+                      <img
+                        src="../assets/open-live.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Live Site</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="projects__list__cards__card">
-              <img src="" alt="" class="projects__list__cards__card__image" />
+              <div class="projects__list__cards__card">
+                <span
+                  class="projects__list__cards__card__image__container"
+                  id="sunnyside-landing-page"
+                  ><img
+                    src="../assets/project-screenshots/sunnyside-landing-page-fem.jpg"
+                    draggable="false"
+                    alt=""
+                    class="projects__list__cards__card__image"
+                /></span>
 
-              <div class="projects__list__cards__card__desc">
-                <h3 class="projects__list__cards__card__title">
-                  Twitter Clone
-                </h3>
-                <div class="projects__list__cards__card__buttons">
-                  <a
-                    href=""
-                    class="projects__list__cards__card__button projects__list__cards__card__button--github"
-                  >
-                    <img
-                      src="../assets/github-icon.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Github</span>
-                  </a>
-                  <a href="" class="projects__list__cards__card__button projects__list__cards__card__button--live">
-                    <img
-                      src="../assets/open-live.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Live Site</span>
-                  </a>
+                <div class="projects__list__cards__card__desc">
+                  <h3 class="projects__list__cards__card__title">
+                    Sunnyside Landing Page
+                  </h3>
+                  <div class="projects__list__cards__card__buttons">
+                    <a
+                      href="https://github.com/Adrian-py/FrontendMentor---Sunnyside-agency-landing-page"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--github"
+                    >
+                      <img
+                        src="../assets/github-icon.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Github</span>
+                    </a>
+                    <a
+                      href="https://adrian-py.github.io/FrontendMentor---Sunnyside-agency-landing-page/"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--live"
+                    >
+                      <img
+                        src="../assets/open-live.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Live Site</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="projects__list__cards__card">
-              <img src="" alt="" class="projects__list__cards__card__image" />
+              <div class="projects__list__cards__card">
+                <span
+                  class="projects__list__cards__card__image__container"
+                  id="profile-card"
+                  ><img
+                    src="../assets/project-screenshots/card-profile-fem.jpg"
+                    draggable="false"
+                    alt=""
+                    class="projects__list__cards__card__image"
+                /></span>
 
-              <div class="projects__list__cards__card__desc">
-                <h3 class="projects__list__cards__card__title">
-                  Twitter Clone
-                </h3>
-                <div class="projects__list__cards__card__buttons">
-                  <a
-                    href=""
-                    class="projects__list__cards__card__button projects__list__cards__card__button--github"
-                  >
-                    <img
-                      src="../assets/github-icon.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Github</span>
-                  </a>
-                  <a href="" class="projects__list__cards__card__button projects__list__cards__card__button--live">
-                    <img
-                      src="../assets/open-live.svg"
-                      alt=""
-                      class="projects__list__cards__card__buttons__icon"
-                    />
-                    <span>Live Site</span>
-                  </a>
+                <div class="projects__list__cards__card__desc">
+                  <h3 class="projects__list__cards__card__title">
+                    Profile Card Component
+                  </h3>
+                  <div class="projects__list__cards__card__buttons">
+                    <a
+                      href="https://github.com/Adrian-py/Frontend-Mentor----Profile-card-component-challenge-hub"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--github"
+                    >
+                      <img
+                        src="../assets/github-icon.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Github</span>
+                    </a>
+                    <a
+                      href="https://adrian-py.github.io/Frontend-Mentor----Profile-card-component-challenge-hub/"
+                      class="projects__list__cards__card__button projects__list__cards__card__button--live"
+                    >
+                      <img
+                        src="../assets/open-live.svg"
+                        alt=""
+                        class="projects__list__cards__card__buttons__icon"
+                      />
+                      <span>Live Site</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -237,6 +312,19 @@
         </div>
       </div>
     </main>
+    <div class="project-detail__container">
+      <div class="project-detail__box">
+        <h2 class="project-detail__box__title"></h2>
+        <p class="project-detail__box__desc"></p>
+        <img
+          src="../assets/close.svg"
+          alt=""
+          class="project-detail__box__close"
+        />
+      </div>
+      <div class="project-detail__overlay"></div>
+    </div>
   </body>
   <script src="../js/index.js"></script>
+  <script src="../js/project.js"></script>
 </html>

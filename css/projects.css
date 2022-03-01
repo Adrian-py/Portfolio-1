@@ -81,12 +81,9 @@ main {
 }
 
 .projects__title {
+  margin-bottom: 7.87vh;
   font-size: 6rem;
-  margin-bottom: 7.87vh;
-}
-
-.projects__list__titles {
-  margin-bottom: 7.87vh;
+  font-family: "Futura Hv BT";
 }
 
 .projects__list__titles__title {
@@ -97,18 +94,27 @@ main {
   font-size: 2rem;
 }
 
+.projects__list__cards__container {
+  position: relative;
+  left: -1vh;
+  width: 100%;
+  height: fit-content;
+  padding: 7.87vh 0 12.129vh 1vh;
+}
+
 .projects__list__cards {
-  width: auto;
-  height: 31.25rem;
-  margin-bottom: 12.129vh;
-  display: flex;
-  justify-content: flex-start;
+  --width: 23.5675rem;
+  --height: 29.459375rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--width));
+  grid-auto-rows: var(--height);
   align-items: center;
-  gap: 3.125vw;
+  gap: 2.25vw;
 }
 
 .projects__list__cards__card {
-  width: 25rem;
+  width: 100%;
   height: 100%;
   background: var(--light);
   border-radius: 10px;
@@ -120,20 +126,49 @@ main {
   overflow: hidden;
 }
 
-.projects__list__cards__card__image {
+.projects__list__cards__card__image__container {
+  position: relative;
   width: 100%;
   height: 60%;
+}
+
+.projects__list__cards__card__image__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.projects__list__cards__card__image__container:hover::before {
+  opacity: 1;
+}
+
+.projects__list__cards__card__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   background: lightblue;
+  user-select: none;
+  z-index: 0;
 }
 
 .projects__list__cards__card__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Futura Hv BT";
+  text-align: center;
 }
 
 .projects__list__cards__card__desc {
   width: 72.25%;
-  height: 22%;
+  min-height: 22%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,7 +179,7 @@ main {
 
 .projects__list__cards__card__buttons {
   width: 100%;
-  height: 60.465%;
+  min-height: 60.465%;
   display: flex;
   justify-content: center;
   gap: 5%;
@@ -175,8 +210,68 @@ main {
   color: var(--light);
 }
 
+.project-detail__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+}
+
+.project-detail__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 40%;
+  padding: 5.5% 2.5%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10%;
+  background: var(--light);
+  z-index: 1;
+}
+
+.project-detail__box__title {
+  font-size: 4rem;
+}
+
+.project-detail__box__desc {
+  font-size: 1.5rem;
+}
+
+.project-detail__box__close {
+  position: absolute;
+  top: 5%;
+  right: 2.5%;
+  width: 4%;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.project-detail__box__close:active {
+  width: 3.75%;
+}
+
+.project-detail__overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 /* Large - 1600, 1536 */
 @media only screen and (max-width: 100em) {
+  .project-detail__box {
+    width: 60%;
+    height: 50%;
+  }
 }
 
 /* Medium - 1440, 1366, 1280 */
@@ -184,12 +279,46 @@ main {
   .nav-links li a {
     font-size: 1.75rem;
   }
+
+  .projects__list__cards {
+    --width: 21.435rem;
+    --height: 26.78rem;
+  }
 }
 
 /* Small - 1024x768 */
 @media only screen and (max-width: 64em) {
   .nav-links {
     width: 65%;
+  }
+
+  .projects__title {
+    font-size: 5.5rem;
+  }
+
+  .projects__list__titles__title {
+    font-size: 3.25rem;
+  }
+
+  .projects__list__titles__desc {
+    font-size: 1.5rem;
+  }
+
+  .projects__list__cards__container {
+    padding-top: 6vh;
+  }
+
+  .projects__list__cards__card__button--github {
+    min-width: 45%;
+  }
+
+  .projects__list__cards__card__button--live {
+    min-width: 50%;
+  }
+
+  .project-detail__box {
+    width: 75%;
+    padding: 5.5% 3.5%;
   }
 }
 
@@ -211,7 +340,7 @@ main {
     background: white;
     box-shadow: -10px 0 50px 10px rgba(12, 21, 45, 0.25);
     transition: all 250ms ease-in-out;
-    z-index: 2;
+    z-index: 3;
     overflow: hidden;
   }
 
@@ -229,13 +358,41 @@ main {
   }
 
   #nav-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background: rgba(12, 21, 45, 0.25);
-    z-index: 1;
+    z-index: 2;
+  }
+
+  .projects__list__cards__container {
+    overflow: scroll;
+  }
+
+  .projects__list__cards__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projects__list__cards {
+    height: var(--height);
+    display: flex;
+    justify-content: flex-start;
+    gap: 3.75vw;
+  }
+
+  .projects__list__cards__card {
+    min-width: 23.5675rem;
+  }
+
+  .project-detail__box {
+    width: 85%;
+    height: 40%;
+  }
+
+  .project-detail__box__title {
+    font-size: 3rem;
   }
 }
 
@@ -252,5 +409,66 @@ main {
 
   #nav-close {
     width: 12%;
+  }
+
+  main {
+    padding-top: 4.475vh;
+  }
+
+  .projects__title {
+    margin-bottom: 3.75vh;
+    font-size: 2.25rem;
+    text-align: center;
+  }
+
+  .projects__list__titles__title {
+    font-size: 1.5rem;
+  }
+
+  .projects__list__titles__desc {
+    font-size: 1rem;
+  }
+
+  .projects__list__cards__container {
+    padding-top: 1.875vh;
+    padding-bottom: 3.9vh;
+  }
+
+  .projects__list__cards {
+    --height: 16.8125rem;
+  }
+
+  .projects__list__cards__card {
+    min-width: 13.4375rem;
+  }
+
+  .projects__list__cards__card__desc {
+    gap: 0.5rem;
+  }
+
+  .projects__list__cards__card__title {
+    font-size: 1.1rem;
+  }
+
+  .projects__list__cards__card__buttons__icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .projects__list__cards__card__button span {
+    font-size: 0.8rem;
+  }
+
+  .project-detail__box {
+    width: 90%;
+    height: 75%;
+  }
+
+  .project-detail__box__title {
+    font-size: 2rem;
+  }
+
+  .project-detail__box__desc {
+    font-size: 1.25rem;
   }
 }

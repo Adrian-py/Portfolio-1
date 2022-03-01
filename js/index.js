@@ -1,3 +1,4 @@
+// Navigation bar
 const burgerButton = document.querySelector("#nav-burger"),
   closeButton = document.querySelector("#nav-close"),
   navLinks = document.querySelector("#nav-links"),

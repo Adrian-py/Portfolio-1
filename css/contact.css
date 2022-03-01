@@ -105,12 +105,12 @@ main {
 }
 
 .contact__form__label {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .contact__form__input {
   width: 82.91%;
-  height: 89.552%;
+  height: 90%;
   padding: 0 1.5%;
   border: 1px solid var(--dark);
   border-radius: 10px;
@@ -202,7 +202,7 @@ main {
     font-size: 4rem;
   }
   .contact__form__submit {
-    height: 20%;
+    height: 18%;
   }
 }
 
@@ -238,7 +238,7 @@ main {
   }
 
   #nav-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
