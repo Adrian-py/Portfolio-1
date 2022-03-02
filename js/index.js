@@ -32,3 +32,6 @@ function closeNav() {
   }
   openBoolean = false;
 }
+
+// Animation on Scroll initialization
+AOS.init();

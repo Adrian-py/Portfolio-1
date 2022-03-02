@@ -8,6 +8,8 @@
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../css/about.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -33,8 +35,16 @@
           src="../assets/picture.jpg"
           alt="portfolio picture"
           class="description__picture"
+          data-aos="fade-right"
+          data-aos-easing="linear"
+          data-aos-duration="500"
         />
-        <div class="description">
+        <div
+          class="description"
+          data-aos="fade-left"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <h1 class="description__name">Adrian Hartanto</h1>
           <p class="description__about">
             My name is Adrian Hartanto, I am 19 years old and I am currently a
@@ -65,7 +75,12 @@
       </div>
       <div class="softwares__container">
         <h2 class="softwares__title">Software</h2>
-        <div class="softwares__list">
+        <div
+          class="softwares__list"
+          data-aos="flip-down"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <div class="softwares__icon" id="vscode-icon">
             <svg
               width="91"
@@ -126,7 +141,12 @@
       </div>
       <div class="programming-languages__container">
         <h2 class="programming-languages__title">Programming Languages</h2>
-        <div class="programming-languages__list">
+        <div
+          class="programming-languages__list"
+          data-aos="flip-down"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+        >
           <div class="programming-languages__icon" id="css3-icon">
             <svg
               width="90"
@@ -223,6 +243,7 @@
         </div>
       </div>
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../js/index.js"></script>
   </body>
-  <script src="../js/index.js"></script>
 </html>

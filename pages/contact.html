@@ -8,6 +8,8 @@
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../css/contact.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -28,8 +30,14 @@
       </nav>
     </header>
     <main class="contact">
-      <h1 class="contact__title">Contact Me</h1>
-      <form action="" class="contact__form" id="contact__form">
+      <h1 class="contact__title" data-aos="fade-right">Contact Me</h1>
+      <form
+        action=""
+        class="contact__form"
+        id="contact__form"
+        data-aos="fade-right"
+        data-aos-delay="250"
+      >
         <div class="contact__form__field contact__form__name">
           <label class="contact__form__label" for="name">Nama:</label>
           <input
@@ -72,11 +80,11 @@
         </div>
       </form>
     </main>
+    <!-- Javascript Files -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/firebase.js"></script>
   </body>
-
-  <!-- Javascript Files -->
-  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
-  <script src="../js/index.js"></script>
-  <script src="../js/firebase.js"></script>
 </html>

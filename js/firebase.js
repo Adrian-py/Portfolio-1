@@ -1,12 +1,12 @@
 // Connecting to firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBTA2okL17ubLumUK_EnmD6_ntgCzdMp2I",
-  authDomain: "personal-project-5726e.firebaseapp.com",
-  projectId: "personal-project-5726e",
-  storageBucket: "personal-project-5726e.appspot.com",
-  messagingSenderId: "199426811023",
-  appId: "1:199426811023:web:dba28ca84893865182fcfa",
-  measurementId: "G-173B53V228",
+  apiKey: "AIzaSyAQIPU-r8xurixfvwXfM2uIRzr5QEMwLSM",
+  authDomain: "lnt-project-b3639.firebaseapp.com",
+  projectId: "lnt-project-b3639",
+  storageBucket: "lnt-project-b3639.appspot.com",
+  messagingSenderId: "715262381031",
+  appId: "1:715262381031:web:b21e64366d12ac5b178b42",
+  measurementId: "G-TPYT2BYK4H",
 };
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
@@ -18,19 +18,6 @@ const form = document.getElementById("contact__form");
 
 form.addEventListener("submit", submitingForm);
 
-function getInsertedValue(n) {
-  return document.getElementById(n).value;
-}
-
-function sendToFirebase(m) {
-  console.log("test");
-  messages.add(m).then((response) => {
-    response.get().then((r) => {
-      console.log(r);
-    });
-  });
-}
-
 function submitingForm(e) {
   e.preventDefault();
   let flag = true;
@@ -39,9 +26,8 @@ function submitingForm(e) {
     phone = getInsertedValue("phone"),
     message = getInsertedValue("message");
 
+  // Validasi
   if (!name.length) {
-    console.log("n");
-
     let temp = document.getElementById("name");
     temp.style.border = "solid 1px red";
     temp.value = "";
@@ -50,7 +36,6 @@ function submitingForm(e) {
   }
 
   if (!email.length || email.indexOf("@") == -1) {
-    console.log("e");
     let temp = document.getElementById("email");
     temp.style.border = "solid 1px red";
     temp.value = "";
@@ -59,7 +44,6 @@ function submitingForm(e) {
   }
   if (!phone.length || phone.substr(0, 2) != "08" || phone.length > 15) {
     let temp = document.getElementById("phone");
-    console.log("p");
     temp.style.border = "solid 1px red";
     temp.value = "";
     temp.setAttribute(
@@ -70,7 +54,6 @@ function submitingForm(e) {
   }
 
   if (message.split(" ").length < 5 || message.split(" ").length > 100) {
-    console.log("m");
     let temp = document.getElementById("message");
     temp.style.border = "solid 1px red";
     temp.value = "";
@@ -90,4 +73,20 @@ function submitingForm(e) {
     };
     sendToFirebase(data);
   }
+}
+
+function getInsertedValue(n) {
+  return document.getElementById(n).value;
+}
+
+function sendToFirebase(m) {
+  console.log(m);
+  messages.add(m).then(
+    (response) => {
+      console.log("Message successfuly sent! ", response);
+    },
+    (e) => {
+      throw "Failed to add message!\n Error Message: " + e;
+    }
+  );
 }

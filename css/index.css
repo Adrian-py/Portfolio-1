@@ -91,7 +91,6 @@ main {
   margin-bottom: 5rem;
   font-family: "Futura Hv BT";
   font-size: 7.5rem;
-  animation: 500ms slideFromLeft ease-in-out 1;
 }
 
 .landing__title__buttons {
@@ -114,14 +113,12 @@ main {
   border-radius: 15px;
   text-decoration: none;
   color: var(--light);
-  animation: 500ms swipeFromTop ease-in-out 1;
   transition: all 150ms ease-in-out;
 }
 
 .landing__decoration__container {
   position: relative;
   width: 50%;
-  animation: 500ms showUp ease-in-out 1;
 }
 
 .landing__decoration__float {
@@ -151,44 +148,13 @@ main {
   }
 }
 
-@keyframes slideFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-5%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes swipeFromTop {
-  0% {
-    opacity: 0;
-    transform: scaleY(0%);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleY(100%);
-  }
-}
-
-@keyframes showUp {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 /* =========
  Media Queries
 =========== */
 /* Large - 1600, 1536, 1440 */
 @media only screen and (max-width: 100em) {
   .landing__title__hero {
-    font-size: 6.5rem;
+    font-size: 6.25rem;
   }
 
   .landing__title__button {
@@ -207,7 +173,7 @@ main {
   }
 
   .landing__title__hero {
-    font-size: 5.75rem;
+    font-size: 5.6rem;
     margin-bottom: 3rem;
   }
 
@@ -235,7 +201,7 @@ main {
   }
 
   .landing__title__button {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     padding: 1.4rem 1.5rem;
   }
 }

@@ -8,6 +8,8 @@
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="../css/projects.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -28,12 +30,14 @@
       </nav>
     </header>
     <main class="projects">
-      <h1 class="projects__title">My Portfolio</h1>
+      <h1 class="projects__title" data-aos="fade-right" data-aos-duration="400">
+        My Portfolio
+      </h1>
       <div class="projects__list">
         <!-- Personal Projects -->
         <div class="projects__list__container">
           <!-- Title -->
-          <div class="projects__list__titles">
+          <div class="projects__list__titles" data-aos="flip-down">
             <h2 class="projects__list__titles__title">Personal Projects</h2>
             <p class="projects__list__titles__desc">
               These are the projects that I created and did on my own, whether
@@ -44,7 +48,7 @@
           <!-- Projects List -->
           <div class="projects__list__cards__container">
             <div class="projects__list__cards">
-              <div class="projects__list__cards__card">
+              <div class="projects__list__cards__card" data-aos="flip-right">
                 <span
                   class="projects__list__cards__card__image__container"
                   id="twitter-clone"
@@ -86,7 +90,7 @@
                 </div>
               </div>
 
-              <div class="projects__list__cards__card">
+              <div class="projects__list__cards__card" data-aos="flip-right">
                 <span
                   class="projects__list__cards__card__image__container"
                   id="kenshin-impact"
@@ -142,7 +146,7 @@
           </div>
           <div class="projects__list__cards__container">
             <div class="projects__list__cards">
-              <div class="projects__list__cards__card">
+              <div class="projects__list__cards__card" data-aos="flip-right">
                 <span
                   class="projects__list__cards__card__image__container"
                   id="social-dashboard"
@@ -182,7 +186,7 @@
                 </div>
               </div>
 
-              <div class="projects__list__cards__card">
+              <div class="projects__list__cards__card" data-aos="flip-right">
                 <span
                   class="projects__list__cards__card__image__container"
                   id="stats-preview"
@@ -224,7 +228,7 @@
                 </div>
               </div>
 
-              <div class="projects__list__cards__card">
+              <div class="projects__list__cards__card" data-aos="flip-right">
                 <span
                   class="projects__list__cards__card__image__container"
                   id="sunnyside-landing-page"
@@ -266,7 +270,7 @@
                 </div>
               </div>
 
-              <div class="projects__list__cards__card">
+              <div class="projects__list__cards__card" data-aos="flip-right">
                 <span
                   class="projects__list__cards__card__image__container"
                   id="profile-card"
@@ -324,7 +328,8 @@
       </div>
       <div class="project-detail__overlay"></div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/project.js"></script>
   </body>
-  <script src="../js/index.js"></script>
-  <script src="../js/project.js"></script>
 </html>

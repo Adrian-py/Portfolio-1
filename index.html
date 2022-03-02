@@ -8,6 +8,8 @@
 
     <!-- CSS Styles -->
     <link rel="stylesheet" href="./css/index.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
@@ -28,9 +30,13 @@
       </nav>
     </header>
     <main>
-      <div class="landing__title">
+      <div class="landing__title" data-aos="fade-right">
         <h1 class="landing__title__hero">Welcome to<br />My Portfolio!</h1>
-        <div class="landing__title__buttons">
+        <div
+          class="landing__title__buttons"
+          data-aos="flip-down"
+          data-aos-delay="400"
+        >
           <a href="./pages/contact.html" class="landing__title__button">
             <img
               src="./assets/message-icon.svg"
@@ -58,6 +64,7 @@
         <img src="./assets/decoration.svg" alt="" class="landing__decoration" />
       </div>
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
   </body>
-  <script type="text/javascript" src="./js/index.js"></script>
 </html>
